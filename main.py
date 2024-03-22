@@ -1,6 +1,11 @@
 import uvicorn
-from os import getenv
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+PORT = int(os.getenv('PORT', 8000))
+HOST = '0.0.0.0'
 
 if __name__ == "__main__":
-    port = int(getenv("PORT", 8000))
-    uvicorn.run("app.api:app", host="0.0.0.0", port=port, reload=True)
+    uvicorn.run("app.api:app", host = HOST, port = PORT, reload = True)
