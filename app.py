@@ -4,8 +4,8 @@ from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 CORS(app)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://capstone_samonte_db_user:j3vFR3PT7BepaBcEl789ocCL5UzzsYfi@dpg-cnqqb5v109ks73fd77pg-a.singapore-postgres.render.com/capstone_samonte_db'
-
+#app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://capstone_samonte_db_user:j3vFR3PT7BepaBcEl789ocCL5UzzsYfi@dpg-cnqqb5v109ks73fd77pg-a.singapore-postgres.render.com/capstone_samonte_db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:admin123@localhost:5432/test-capstone'
 
 db = SQLAlchemy(app)
 
