@@ -33,6 +33,10 @@ def get_tasks():
     ]
     return jsonify({"tasks": task_list})
 
+@app.route('/getData')
+def get_data():
+    return jsonify({"message": "dammit"})
+
 
 if __name__ == '__main__':
     app.run()
