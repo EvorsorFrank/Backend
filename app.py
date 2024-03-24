@@ -20,6 +20,11 @@ with app.app_context():
     db.create_all()
 
 
+@app.route('/')
+def index():
+    return "hello"
+
+
 @app.route('/tasks')
 def get_tasks():
     tasks = Task.query.all()
